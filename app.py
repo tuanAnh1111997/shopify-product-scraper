@@ -1,11 +1,19 @@
 from flask import Flask, jsonify
 import pymongo
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+MONGO_URI = os.getenv("MONGO_URI")
 
 app = Flask(__name__)
 
-client = pymongo.MongoClient("mongodb+srv://tuancopywriter_db_user:toilaai123@30daysofpython.aa0nav9.mongodb.net/?appName=30DaysOfPython")
+client = pymongo.MongoClient(MONGO_URI)
 db = client["shopify"]
 collection = db["products"]
+
+print(MONGO_URI)
 
 @app.route("/products")
 def get_products():

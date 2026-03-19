@@ -2,6 +2,9 @@ import requests
 import pymongo
 import csv
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 stores = [
     "https://gymshark.com",
@@ -56,7 +59,8 @@ def scrape_all_store():
     
     return all_data
 
-client = pymongo.MongoClient("mongodb+srv://tuancopywriter_db_user:toilaai123@30daysofpython.aa0nav9.mongodb.net/?appName=30DaysOfPython")
+MONGO_URI = os.getenv("MONGO_URI")
+client = pymongo.MongoClient(MONGO_URI)
 db = client["shopify"]
 collection = db["products"]
 
