@@ -1,24 +1,26 @@
-# Shopify Product Scraper
+# Shopify Product Scraper (Python)
 
-A Python-based scraper to extract product data from Shopify stores.
+A fast and reliable scraper to extract product data from Shopify stores using public JSON API.
 
-## Features
-- Scrape product title, price, image
+## 🚀 Features
+- Extract product title, price, images
 - Handle pagination automatically
-- Multi-store support
+- Multi-store scraping
 - Export to CSV
 - Save to MongoDB
+- Supports Shopify public API (/products.json)
 
-## Tech Stack
+## 📊 Sample Output
+
+![Sample](images/sample_output.png)
+
+## 🧰 Tech Stack
 - Python (requests)
 - MongoDB
 - CSV
 
-## How to Run
+## ⚙️ How to Run
 
 ```bash
 pip install -r requirements.txt
 python scraper.py
-
-## Sample Output
-![Sample](sample_output.png)
