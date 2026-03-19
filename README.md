@@ -19,3 +19,6 @@ A Python-based scraper to extract product data from Shopify stores.
 ```bash
 pip install -r requirements.txt
 python scraper.py
+
+## Sample Output
+![Sample](sample_output.png)
